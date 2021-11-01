@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "runner.js",
+  "bin": "./bin/cli.js",
   "scripts": {
     "start": "node runner.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ember-template-recast": "^5.0.3"
+    "ember-template-recast": "^5.0.3",
+    "glob": "^7.2.0",
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "execa": "^5.1.1"
   }
 }
