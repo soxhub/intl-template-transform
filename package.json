@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node runner.js",
     "lint": "eslint .",
-    "test": "node test/run-test.js"
+    "test": "mocha --recursive test/acceptance test/unit"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +18,10 @@
     "yargs": "^17.2.1"
   },
   "devDependencies": {
+    "chai": "^4.3.4",
+    "dir-compare": "^3.3.0",
     "eslint": "^8.1.0",
-    "execa": "^5.1.1"
+    "execa": "^5.1.1",
+    "mocha": "^9.1.3"
   }
 }
