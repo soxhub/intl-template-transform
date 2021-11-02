@@ -6,6 +6,7 @@
   "bin": "./bin/cli.js",
   "scripts": {
     "start": "node runner.js",
+    "lint": "eslint .",
     "test": "node test/run-test.js"
   },
   "author": "",
@@ -16,6 +17,7 @@
     "yargs": "^17.2.1"
   },
   "devDependencies": {
+    "eslint": "^8.1.0",
     "execa": "^5.1.1"
   }
 }
