@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+const semver = require('semver');
+if (semver.lt(process.version, '14.0.0')) {
+  console.error('This program requires at least Node v14 to run');
+  process.exit(1);
+}
+
 const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers')
 const { transform } = require('ember-template-recast');
