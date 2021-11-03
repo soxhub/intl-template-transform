@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node runner.js",
     "lint": "eslint .",
-    "test": "mocha --recursive test/acceptance test/unit"
+    "test": "mocha --recursive test/acceptance test/unit",
+    "test-watch": "mocha --watch --recursive test/acceptance test/unit"
   },
   "author": "",
   "license": "ISC",
