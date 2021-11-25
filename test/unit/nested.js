@@ -1,9 +1,9 @@
 const testCase = require('../helpers/test-case');
 
-describe('nested elements', function() {
-  testCase({
-    name: 'nested span',
-    input: `<img
+describe('nested elements', function () {
+    testCase({
+        name: 'nested span',
+        input: `<img
       src="/images/users/{{sponsor.image}}"
       alt="{{sponsor.name}} website"
       loading="lazy"
@@ -14,17 +14,17 @@ describe('nested elements', function() {
         test
       </span>
     </span>`,
-    output: `<img
+        output: `<img
       src="/images/users/{{sponsor.image}}" alt={{t "{sponsor_name} website" sponsor_name=sponsor.name}} loading="lazy"
     />
     <span>
       {{t "aaa <span title='{sponsor_name} website'> test </span>" sponsor_name=sponsor.name htmlSafe=true}}
     </span>`
-  });
+    });
 
-  testCase({
-    name: 'multiple nested span',
-    input: `
+    testCase({
+        name: 'multiple nested span',
+        input: `
     <span>
       <span>
         Hello
@@ -33,15 +33,15 @@ describe('nested elements', function() {
         world
       </span>
     </span>`,
-    output: `
+        output: `
     <span>
       {{t "<span> Hello </span> <span title='{sponsor_name} website'> world </span>" sponsor_name=sponsor.name htmlSafe=true}}
     </span>`
-  });
+    });
 
-  testCase({
-    name: 'nested span without text',
-    input: `
+    testCase({
+        name: 'nested span without text',
+        input: `
     <span>
       {{this.a}}
       <span>
@@ -51,7 +51,7 @@ describe('nested elements', function() {
         {{this.c}}
       </span>
     </span>`,
-    output: `
+        output: `
     <span>
       {{this.a}}
       <span>
@@ -61,11 +61,11 @@ describe('nested elements', function() {
         {{this.c}}
       </span>
     </span>`,
-  });
+    });
 
-  testCase({
-    name: 'nested span with text',
-    input: `
+    testCase({
+        name: 'nested span with text',
+        input: `
     <span>
       Status
       {{this.a}}
@@ -77,15 +77,15 @@ describe('nested elements', function() {
       </span>
       is interesting.
     </span>`,
-    output: `
+        output: `
     <span>
-      {{t "Status {this_a} <strong> {this_b} </strong> <span title='{sponsor_name} website'> {this_c} </span> is interesting." this_a=this.a this_b=this.b sponsor_name=sponsor.name this_c=this.c htmlSafe=true}}
+      {{t "Status {a} <strong> {b} </strong> <span title='{sponsor_name} website'> {c} </span> is interesting." a=this.a b=this.b sponsor_name=sponsor.name c=this.c htmlSafe=true}}
     </span>`,
-  });
+    });
 
-  testCase({
-    name: 'no empty space between html tags',
-    input: `
+    testCase({
+        name: 'no empty space between html tags',
+        input: `
     <span>
       Status
       {{this.a}}
@@ -96,9 +96,9 @@ describe('nested elements', function() {
       </span>
       is interesting.
     </span>`,
-    output: `
+        output: `
     <span>
-      {{t "Status {this_a} <strong> {this_b} </strong><span title='{sponsor_name} website'> {this_c} </span> is interesting." this_a=this.a this_b=this.b sponsor_name=sponsor.name this_c=this.c htmlSafe=true}}
+      {{t "Status {a} <strong> {b} </strong><span title='{sponsor_name} website'> {c} </span> is interesting." a=this.a b=this.b sponsor_name=sponsor.name c=this.c htmlSafe=true}}
     </span>`,
-  });
+    });
 })
