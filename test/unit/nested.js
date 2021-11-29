@@ -2,8 +2,8 @@ const testCase = require('../helpers/test-case');
 
 describe('nested elements', function () {
     testCase({
-        name: 'nested span',
-        input: `<img
+      name: 'nested span',
+      input: `<img
       src="/images/users/{{sponsor.image}}"
       alt="{{sponsor.name}} website"
       loading="lazy"
@@ -14,8 +14,10 @@ describe('nested elements', function () {
         test
       </span>
     </span>`,
-        output: `<img
-      src="/images/users/{{sponsor.image}}" alt={{t "{sponsor_name} website" sponsor_name=sponsor.name}} loading="lazy"
+      output: `<img
+      src="/images/users/{{sponsor.image}}"
+      alt={{t "{sponsor_name} website" sponsor_name=sponsor.name}}
+      loading="lazy"
     />
     <span>
       {{t "aaa <span title='{sponsor_name} website'> test </span>" sponsor_name=sponsor.name htmlSafe=true}}
@@ -70,7 +72,7 @@ describe('nested elements', function () {
       Status
       {{this.a}}
       <strong>
-        {{this.b}} 
+        {{this.b}}
       </strong>
       <span title="{{sponsor.name}} website">
         {{this.c}}
@@ -90,7 +92,7 @@ describe('nested elements', function () {
       Status
       {{this.a}}
       <strong>
-        {{this.b}} 
+        {{this.b}}
       </strong><span title="{{sponsor.name}} website">
         {{this.c}}
       </span>
