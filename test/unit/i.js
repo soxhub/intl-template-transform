@@ -1,6 +1,6 @@
 const testCase = require('../helpers/test-case');
 
-describe('test of auditboard-icons', function() {
+describe('test of auditboard-icons', function () {
     testCase({
         name: 'icon not translated',
         input: `
@@ -25,5 +25,15 @@ describe('test of auditboard-icons', function() {
         name: 'i translated',
         input: `<i class="fs-14 mr-3">This is nice text.</i>`,
         output: `<i class="fs-14 mr-3">{{t "This is nice text."}}</i>`
+    });
+
+    testCase({
+        name: 'material-icons',
+        input: `
+        <i class='material-icons'> content_cut </i> <span> Cut </span>
+    `,
+        output: `
+        <i class='material-icons'> content_cut </i> <span> {{t "Cut"}} </span>
+    `
     });
 });
