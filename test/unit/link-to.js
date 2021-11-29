@@ -1,6 +1,6 @@
 const testCase = require('../helpers/test-case');
 
-describe('Exclude curly components', function() {
+describe('Exclude curly components', function () {
     testCase({
         name: '{{link-to}} cannot be used in translation',
         input: `
@@ -29,6 +29,20 @@ describe('Exclude curly components', function() {
             {{#link-to "zendesk.index"}}
                 {{t "Click here"}}
             {{/link-to}}
+        </span>
+    `
+    });
+
+    testCase({
+        name: '{{input}} cannot be used in translation',
+        input: `
+        <span>
+            Text {{input value=this.val}}
+        </span>
+    `,
+        output: `
+        <span>
+            {{t "Text"}} {{input value=this.val}}
         </span>
     `
     });
