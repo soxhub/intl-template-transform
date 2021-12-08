@@ -8,13 +8,16 @@
     "start": "node runner.js",
     "lint": "eslint .",
     "test": "mocha --recursive test/acceptance test/unit",
-    "test-watch": "mocha --watch --recursive test/acceptance test/unit"
+    "test-watch": "mocha --watch --recursive test/acceptance test/unit",
+    "testjs": "npx mocha test/acceptance/codeshift.mjs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/parser": "^7.16.4",
     "ember-template-recast": "^5.0.3",
     "glob": "^7.2.0",
+    "jscodeshift": "^0.7.0",
     "require-directory": "^2.1.1",
     "semver": "^7.3.5",
     "yargs": "^17.2.1"
