@@ -10,7 +10,7 @@ describe('Positional params', function () {
     `,
     output: `
     {{page-title
-      (t "Nice Title")
+      (format-message "Nice Title")
       "Second Param"}}
     `
   });
@@ -25,7 +25,7 @@ describe('Positional params', function () {
     output: `
     {{attr-label
       "First Param"
-      (t "Second Param")}}
+      (format-message "Second Param")}}
     `
   });
 
@@ -42,9 +42,9 @@ describe('Positional params', function () {
     output: `
     <span
     {{tooltip
-      (t "Nice Title")
+      (format-message "Nice Title")
       "Second Param"}}>
-      {{t "Test span"}}
+      {{format-message "Test span"}}
     </span>
     `
   });

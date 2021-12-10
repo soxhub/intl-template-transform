@@ -1,6 +1,6 @@
 const testCase = require('../helpers/test-case');
 
-describe('nested elements', function() {
+describe('nested elements', function () {
   testCase({
     name: 'Br inside text',
     input: `
@@ -11,7 +11,7 @@ describe('nested elements', function() {
     </span>`,
     output: `
     <span>
-      {{t "Hello <br /> world" htmlSafe=true}}
+      {{format-message "Hello <br /> world" htmlSafe=true}}
     </span>`
   });
 
@@ -26,7 +26,7 @@ describe('nested elements', function() {
     </span>`,
     output: `
     <span>
-      {{t "Hello <br /> world" htmlSafe=true}}
+      {{format-message "Hello <br /> world" htmlSafe=true}}
       <br />
     </span>`
   });
@@ -43,7 +43,7 @@ describe('nested elements', function() {
     output: `
     <span>
       <br />
-      {{t "Hello <br /> world" htmlSafe=true}}
+      {{format-message "Hello <br /> world" htmlSafe=true}}
     </span>`
   });
 
@@ -62,7 +62,7 @@ describe('nested elements', function() {
     <span>
       <br />
       <br />
-      {{t "Hello <br /> world" htmlSafe=true}}
+      {{format-message "Hello <br /> world" htmlSafe=true}}
       <br />
     </span>`
   });

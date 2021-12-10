@@ -7,7 +7,7 @@ describe('Component arguments', function () {
     <Datatables::DatatableColumn @label='Hello World' />
     `,
     output: `
-    <Datatables::DatatableColumn @label={{t "Hello World"}} />
+    <Datatables::DatatableColumn @label={{format-message "Hello World"}} />
     `
   });
 
@@ -20,7 +20,7 @@ describe('Component arguments', function () {
     `,
     output: `
     <Datatables::DatatableColumn
-    @label={{t "Hello World {val}" val=this.val}}
+    @label={{format-message "Hello World {val}" val=this.val}}
     @second='hello' />
     `
   });
