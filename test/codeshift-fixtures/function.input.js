@@ -7,6 +7,8 @@ function getSomething2(someArg, container) {
   let message = "Nice Message";
   let message2 = "Nice Message";
   let message3 = "transform: translate3d(-";
+  let message4 = $("html, body");
+  console.log('Nice Message in console');
   return message;
 }
 

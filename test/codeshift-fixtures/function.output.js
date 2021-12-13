@@ -14,6 +14,8 @@ function getSomething2(someArg, container) {
     defaultMessage: 'Nice Message',
   });
   let message3 = "transform: translate3d(-";
+  let message4 = $("html, body");
+  console.log('Nice Message in console');
   return message;
 }
 
