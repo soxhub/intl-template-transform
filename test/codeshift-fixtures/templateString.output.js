@@ -1,7 +1,7 @@
 import { inject as service } from '@ember/service';
 export default class extends Component {
-	@service
-	intl;
+  @service
+  intl;
 
   c = 1;
   d = 2;
@@ -11,7 +11,7 @@ export default class extends Component {
 		let a = 1;
 		let b = 2;
 		let message = this.intl.formatMessage({
-			defaultMessage: 'This {a} is {b} nice. {c_d}',
+			defaultMessage: 'This {a} is {b} nice.{a} {c_d}',
 		}, {
 			a: a,
 			b: b,
