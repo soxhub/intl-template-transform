@@ -13,6 +13,7 @@ function getSomething2(someArg, container) {
   let message2 = intl.formatMessage({
     defaultMessage: 'Nice Message',
   });
+  let message3 = "transform: translate3d(-";
   return message;
 }
 
