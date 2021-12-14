@@ -10,7 +10,7 @@
     "test": "mocha --recursive test/acceptance test/unit",
     "test-watch": "mocha --watch --recursive test/acceptance test/unit"
   },
-  "author": "",
+  "author": "AuditBoard",
   "license": "ISC",
   "dependencies": {
     "@babel/parser": "^7.16.4",
