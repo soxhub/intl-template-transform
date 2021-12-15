@@ -1,1 +1,0 @@
-assert('Assert Message', typeof payload === 'object');
