@@ -1,8 +1,8 @@
 <img
   src="/images/users/{{sponsor.image}}"
-  alt={{t "{sponsor_name} website" sponsor_name=sponsor.name}}
+  alt={{format-message "{sponsor_name} website" sponsor_name=sponsor.name}}
   loading="lazy"
 />
 <span>
-  {{t "aaa <span title='{sponsor_name} website'> test </span>" sponsor_name=sponsor.name htmlSafe=true}}
+  {{format-message "aaa <span title='{sponsor_name} website'> test </span>" sponsor_name=sponsor.name htmlSafe=true}}
 </span>
