@@ -20,9 +20,17 @@ function getSomething2(someArg, container) {
 }
 
 export default function getSomething(someArg) {
-  let //intl-template-transform TODO: function must have parameter intl, container, owner or intl can be defined inside function.
-    message = "Nice Message";
-  let //intl-template-transform TODO: function must have parameter intl, container, owner or intl can be defined inside function.
-    message2 = "Nice Message";
+
+  //TODO: intl-template-transform function must have parameter intl, container, owner or intl can be defined inside function.
+  let message = "Nice Message";
+
+  //TODO: intl-template-transform function must have parameter intl, container, owner or intl can be defined inside function.
+  let message2 = "Nice Message";
+
+  //TODO: intl-template-transform function must have parameter intl, container, owner or intl can be defined inside function.
+  let message3 = [
+    "Ugly Message",
+  ];
+
   return message;
 }
