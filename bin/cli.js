@@ -26,7 +26,11 @@ async function processFiles(globString) {
   try {
     for (let path of paths) {
       let template = await fs.readFile(path, { encoding: 'utf-8' });
-      let { code } = transform(template, visitor);
+      let { code } = transform({
+        template,
+        filePath: path,
+        plugin: visitor
+      });
       await fs.writeFile(path, code);
     }
   } catch (err) {
