@@ -40,4 +40,20 @@ describe('Empty text', function () {
         <strong>&middot;</strong>
     `
   });
+
+  testCase({
+    name: 'middot',
+    input: `
+    <span>
+    {{comment.ownerUser.fullName}} &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+							{{format-date-ago comment.createdAt}}
+              </span>
+    `,
+    output: `
+    <span>
+    {{comment.ownerUser.fullName}} &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+							{{format-date-ago comment.createdAt}}
+              </span>
+    `
+  });
 });
