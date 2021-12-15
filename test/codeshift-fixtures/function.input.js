@@ -18,5 +18,8 @@ export default function getSomething(someArg) {
   let message3 = [
     "Ugly Message",
   ];
+  let message4 = {
+    message: "Ugly Message",
+  }
   return message;
 }

@@ -32,5 +32,10 @@ export default function getSomething(someArg) {
     "Ugly Message",
   ];
 
+  //TODO: intl-template-transform function must have parameter intl, container, owner or intl can be defined inside function.
+  let message4 = {
+    message: "Ugly Message",
+  };
+
   return message;
 }
