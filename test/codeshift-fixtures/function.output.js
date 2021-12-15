@@ -28,8 +28,6 @@ function getSomething2(someArg, container) {
 }
 
 export default function getSomething(someArg) {
-<<<<<<< HEAD
-
   //TODO: intl-template-transform function must have parameter intl, container, owner or intl can be defined inside function.
   let message = "Nice Message";
 
@@ -55,11 +53,5 @@ function getSomething3(someArg, owner) {
   let message = intl.formatMessage({
     defaultMessage: 'Nice Message',
   });
-=======
-  let //intl-template-transform TODO: function must have parameter intl, container, owner or intl can be defined inside function.
-    message = "Nice Message";
-  let //intl-template-transform TODO: function must have parameter intl, container, owner or intl can be defined inside function.
-    message2 = "Nice Message";
->>>>>>> 2371367 (Added comments to text that cannot be replaced. Translate texts inside Mixin. Get intl from owner.)
   return message;
 }
