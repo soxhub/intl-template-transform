@@ -24,7 +24,7 @@ describe('Helper Arguments', function () {
       {{audit.action}} {{listController.singularLabel}}
     </span>
     <span>
-      {{format-message "with &nbsp;"}}{{clean-audit-field
+      {{format-message "with &nbsp;" htmlSafe=true}}{{clean-audit-field
         field=audit.field
       }}&nbsp;{{convert-audit-value
         field=audit.field
