@@ -48,3 +48,11 @@ export default function getSomething(someArg) {
   //TODO: intl-template-transform function must have parameter intl, container, owner or intl can be defined inside function.
   return "Nice Message";
 }
+
+function getSomething3(someArg, owner) {
+  const intl = owner.lookup('service:intl');
+  let message = intl.formatMessage({
+    defaultMessage: 'Nice Message',
+  });
+  return message;
+}
