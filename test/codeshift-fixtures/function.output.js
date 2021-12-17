@@ -39,3 +39,11 @@ export default function getSomething(someArg) {
 
   return message;
 }
+
+function getSomething3(someArg, owner) {
+  const intl = owner.lookup('service:intl');
+  let message = intl.formatMessage({
+    defaultMessage: 'Nice Message',
+  });
+  return message;
+}

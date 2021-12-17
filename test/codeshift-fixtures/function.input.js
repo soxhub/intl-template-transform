@@ -23,3 +23,8 @@ export default function getSomething(someArg) {
   }
   return message;
 }
+
+function getSomething3(someArg, owner) {
+  let message = "Nice Message";
+  return message;
+}
