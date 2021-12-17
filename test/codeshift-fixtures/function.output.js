@@ -23,6 +23,7 @@ function getSomething2(someArg, container) {
   assert('Nice Message');
   console.warn('Nice Message');
   console.error('Nice Message');
+  aaa.css('some css');
   return message;
 }
 
