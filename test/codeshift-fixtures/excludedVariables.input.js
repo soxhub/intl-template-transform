@@ -12,6 +12,8 @@ class Example {
   tdClass = "class1 class2";
   font = "class1 class2";
   fontFamily = "class1 class2";
+  filterFormat = "class1 class2";
+  tdClassName = "class1 class2";
 
   message() {
     let className = 'class3 class4';
