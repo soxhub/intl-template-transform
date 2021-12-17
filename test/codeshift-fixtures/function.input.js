@@ -23,5 +23,11 @@ function getSomething2(someArg, container) {
 export default function getSomething(someArg) {
   let message = "Nice Message";
   let message2 = "Nice Message";
-  return message;
+  let message3 = [
+    "Ugly Message",
+  ];
+  let message4 = {
+    message: "Ugly Message",
+  }
+  return "Nice Message";
 }
