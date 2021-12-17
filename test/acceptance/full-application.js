@@ -17,6 +17,7 @@ const binPath = resolve('./bin/cli.js');
 
 describe('Acceptance Test | run full transform on ember application', function () {
   it('should successfully migrate a full ember application', async function () {
+    this.timeout(20000);
     const tempDir = await temp.mkdir('ember-app');
 
     // copy input fixture to tempDir so we don't mutate the files every time
