@@ -1,6 +1,6 @@
 {
-  "name": "codemods",
-  "version": "1.0.0",
+  "name": "@soxhub/intl-template-transform",
+  "version": "1.0.0-beta.2",
   "description": "",
   "main": "runner.js",
   "bin": "./bin/cli.js",
@@ -10,7 +10,7 @@
     "test": "mocha --recursive test/acceptance test/unit",
     "test-watch": "mocha --watch --recursive test/acceptance test/unit"
   },
-  "author": "",
+  "author": "AuditBoard",
   "license": "ISC",
   "dependencies": {
     "@babel/parser": "^7.16.4",
