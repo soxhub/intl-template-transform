@@ -1,6 +1,6 @@
 {
   "name": "@soxhub/intl-template-transform",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.1",
   "description": "",
   "main": "runner.js",
   "bin": "./bin/cli.js",
@@ -10,7 +10,7 @@
     "test": "mocha --recursive test/acceptance test/unit",
     "test-watch": "mocha --watch --recursive test/acceptance test/unit"
   },
-  "author": "AuditBoard",
+  "author": "AuditBoard with the help of simplabs",
   "license": "ISC",
   "dependencies": {
     "@babel/parser": "^7.16.4",
