@@ -8,8 +8,6 @@ export default class extends TestAuthenticator {
 
   constructor() {
     super(...arguments);
-    let message = this.intl.formatMessage({
-      defaultMessage: 'Message to translate',
-    });
+    let message = this.intl.formatMessage('Message to translate');
   }
 }

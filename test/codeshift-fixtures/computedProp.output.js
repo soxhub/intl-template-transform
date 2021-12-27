@@ -6,54 +6,38 @@ export default Component.extend({
   intl: service('intl'),
 
   message: computed(function () {
-    return this.intl.formatMessage({
-      defaultMessage: 'Nice Message',
-    });
+    return this.intl.formatMessage('Nice Message');
   }),
 
   message2: computed(function () {
     return [
-      this.intl.formatMessage({
-        defaultMessage: 'Message',
-      })
+      this.intl.formatMessage('Message')
     ];
   }),
 
   message2_2: computed(function () {
     return {
-      message: this.intl.formatMessage({
-        defaultMessage: 'Message',
-      })
+      message: this.intl.formatMessage('Message')
     };
   }),
 
   message3() {
-    return this.intl.formatMessage({
-      defaultMessage: 'Message',
-    });
+    return this.intl.formatMessage('Message');
   },
 
   message4: function () {
-    return this.intl.formatMessage({
-      defaultMessage: 'Message',
-    });
+    return this.intl.formatMessage('Message');
   },
 
   message5: () => {
-    return this.intl.formatMessage({
-      defaultMessage: 'Message',
-    });
+    return this.intl.formatMessage('Message');
   },
 
   message6: task(function* () {
-    return this.intl.formatMessage({
-      defaultMessage: 'Message',
-    });
+    return this.intl.formatMessage('Message');
   }),
 
   message7: computed(function* () {
-    return this.intl.formatMessage({
-      defaultMessage: 'Message',
-    });
+    return this.intl.formatMessage('Message');
   }),
 });
