@@ -44,8 +44,6 @@ export default function getSomething(someArg) {
 
 function getSomething3(someArg, owner) {
   const intl = owner.lookup('service:intl');
-  let message = intl.formatMessage({
-    defaultMessage: 'Nice Message',
-  });
+  let message = intl.formatMessage('Nice Message');
   return message;
 }
