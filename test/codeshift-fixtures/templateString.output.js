@@ -10,7 +10,9 @@ export default class extends Component {
 
 		let a = 1;
 		let b = 2;
-		let message = this.intl.formatMessage('This {a} is {b} nice.{a} {c_d}', {
+		let message = this.intl.formatMessage({
+			defaultMessage: 'This {a} is {b} nice.{a} {c_d}',
+		}, {
 			a: a,
 			b: b,
       c_d: this.c + this.d,

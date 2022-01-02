@@ -6,12 +6,26 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    let noFormatting = this.intl.formatMessage('Nice Message');
-    let message = this.intl.formatMessage('<span>Nice Message</span>');
-    let message2 = this.intl.formatMessage('<b>Nice Message</b>');
-    let message3 = this.intl.formatMessage('Nice Message<br />');
-    let message4 = this.intl.formatMessage('Nice Message<br/>');
-    let message5 = this.intl.formatMessage('Nice Message<br>');
-    let message6 = this.intl.formatMessage('<strong>Nice Message</strong>');
+    let noFormatting = this.intl.formatMessage({
+      defaultMessage: 'Nice Message',
+    });
+    let message = this.intl.formatMessage({
+      defaultMessage: '<span>Nice Message</span>',
+    });
+    let message2 = this.intl.formatMessage({
+      defaultMessage: '<b>Nice Message</b>',
+    });
+    let message3 = this.intl.formatMessage({
+      defaultMessage: 'Nice Message<br />',
+    });
+    let message4 = this.intl.formatMessage({
+      defaultMessage: 'Nice Message<br/>',
+    });
+    let message5 = this.intl.formatMessage({
+      defaultMessage: 'Nice Message<br>',
+    });
+    let message6 = this.intl.formatMessage({
+      defaultMessage: '<strong>Nice Message</strong>',
+    });
   },
 });

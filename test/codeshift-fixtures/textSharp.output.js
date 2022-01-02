@@ -1,3 +1,5 @@
 function test(intl) {
-	let message = intl.formatMessage('Jira Ticket #');
+	let message = intl.formatMessage({
+		defaultMessage: 'Jira Ticket #',
+	});
 }

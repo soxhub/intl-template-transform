@@ -6,7 +6,9 @@ export default helper(function (intl, params) {
     const decimals = params[1];
 
     if (bytes === 0) {
-      return intl.formatMessage('0 Bytes');
+      return intl.formatMessage({
+        defaultMessage: '0 Bytes',
+      });
     }
   };
 });

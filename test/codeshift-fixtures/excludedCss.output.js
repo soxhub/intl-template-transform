@@ -5,7 +5,9 @@ function test(intl){
 
   let aaa= {
     someLogo: htmlSafe('some css styles'),
-    translated: intl.formatMessage('some css styles'),
+    translated: intl.formatMessage({
+      defaultMessage: 'some css styles',
+    }),
   };
 }
 
