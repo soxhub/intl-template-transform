@@ -1,6 +1,6 @@
 {
   "name": "@soxhub/intl-template-transform",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "runner.js",
   "bin": "./bin/cli.js",
