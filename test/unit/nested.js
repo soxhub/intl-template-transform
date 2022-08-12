@@ -16,11 +16,11 @@ describe('nested elements', function () {
     </span>`,
     output: `<img
       src="/images/users/{{sponsor.image}}"
-      alt={{format-message "{sponsor_name} website" sponsor_name=sponsor.name}}
+      alt={{format-message "{sponsorName} website" sponsorName=sponsor.name}}
       loading="lazy"
     />
     <span>
-      {{format-message "aaa <span title='{sponsor_name} website'> test </span>" sponsor_name=sponsor.name htmlSafe=true}}
+      {{format-message "aaa <span title='{sponsorName} website'> test </span>" sponsorName=sponsor.name htmlSafe=true}}
     </span>`
   });
 
@@ -37,7 +37,7 @@ describe('nested elements', function () {
     </span>`,
     output: `
     <span>
-      {{format-message "<span> Hello </span> <span title='{sponsor_name} website'> world </span>" sponsor_name=sponsor.name htmlSafe=true}}
+      {{format-message "<span> Hello </span> <span title='{sponsorName} website'> world </span>" sponsorName=sponsor.name htmlSafe=true}}
     </span>`
   });
 
@@ -59,7 +59,7 @@ describe('nested elements', function () {
       <span>
         {{this.b}}
       </span>
-      <span title={{format-message "{sponsor_name} website" sponsor_name=sponsor.name}}>
+      <span title={{format-message "{sponsorName} website" sponsorName=sponsor.name}}>
         {{this.c}}
       </span>
     </span>`,
@@ -81,7 +81,7 @@ describe('nested elements', function () {
     </span>`,
     output: `
     <span>
-      {{format-message "Status {a} <strong> {b} </strong> <span title='{sponsor_name} website'> {c} </span> is interesting." a=this.a b=this.b sponsor_name=sponsor.name c=this.c htmlSafe=true}}
+      {{format-message "Status {a} <strong> {b} </strong> <span title='{sponsorName} website'> {c} </span> is interesting." a=this.a b=this.b sponsorName=sponsor.name c=this.c htmlSafe=true}}
     </span>`,
   });
 
@@ -100,7 +100,7 @@ describe('nested elements', function () {
     </span>`,
     output: `
     <span>
-      {{format-message "Status {a} <strong> {b} </strong><span title='{sponsor_name} website'> {c} </span> is interesting." a=this.a b=this.b sponsor_name=sponsor.name c=this.c htmlSafe=true}}
+      {{format-message "Status {a} <strong> {b} </strong><span title='{sponsorName} website'> {c} </span> is interesting." a=this.a b=this.b sponsorName=sponsor.name c=this.c htmlSafe=true}}
     </span>`,
   });
 })

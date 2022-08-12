@@ -11,11 +11,11 @@ export default class extends Component {
 		let a = 1;
 		let b = 2;
 		let message = this.intl.formatMessage({
-			defaultMessage: 'This {a} is {b} nice.{a} {c_d}',
+			defaultMessage: 'This {a} is {b} nice.{a} {cD}',
 		}, {
 			a: a,
 			b: b,
-      c_d: this.c + this.d,
+      cD: this.c + this.d,
 		});
 	}
 }

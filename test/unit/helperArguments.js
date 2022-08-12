@@ -6,7 +6,7 @@ describe('Helper Arguments', function () {
     input: `<span title="{{fn this.testFunction 2.2 '{3}'}} website {4}">
         test
       </span>`,
-    output: `<span title={{format-message "{fn_testFunction_2_2_3} website '{4'}" fn_testFunction_2_2_3=(fn this.testFunction 2.2 "{3}")}}>
+    output: `<span title={{format-message "{fnTestFunction3} website '{4'}" fnTestFunction3=(fn this.testFunction 2.2 "{3}")}}>
         {{format-message "test"}}
       </span>`
   })

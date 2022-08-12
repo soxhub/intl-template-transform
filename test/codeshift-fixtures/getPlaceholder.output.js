@@ -1,7 +1,7 @@
 function test(intl) {
   let message = intl.formatMessage({
-    defaultMessage: 'Hello {obj_name}',
+    defaultMessage: 'Hello {objName}',
   }, {
-    obj_name: get(obj, 'name'),
+    objName: get(obj, 'name'),
   });
 }
