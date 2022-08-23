@@ -11,7 +11,6 @@ function getSomething2(someArg, container) {
   console.log('Nice Message in console');
   aaa.on('Nice Message');
   aaa.indexOf('Nice Message');
-  pluralize('Nice Message');
   aaa.format('Nice Message');
   assert('Nice Message');
   console.warn('Nice Message');
