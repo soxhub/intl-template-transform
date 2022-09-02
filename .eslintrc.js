@@ -7,7 +7,7 @@ module.exports = {
     node: true,
     es6: true,
   },
-  extends: ['eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   overrides: [
     {
       files: ['test/**/*.js'],
