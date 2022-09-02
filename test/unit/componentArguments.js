@@ -8,7 +8,7 @@ describe('Component arguments', function () {
     `,
     output: `
     <Datatables::DatatableColumn @label={{format-message "Hello World"}} />
-    `
+    `,
   });
 
   testCase({
@@ -22,6 +22,6 @@ describe('Component arguments', function () {
     <Datatables::DatatableColumn
     @label={{format-message "Hello World {val}" val=this.val}}
     @second='hello' />
-    `
+    `,
   });
 });

@@ -1,4 +1,3 @@
-
 const testCase = require('../helpers/test-case');
 
 describe('grouping allowed elements', function () {
@@ -26,7 +25,6 @@ describe('grouping allowed elements', function () {
             <div>{{format-message "Not Formatting Element"}}</div>
             {{format-message "<code>h</code> <br /> <sup>i</sup> <sub>j</sub>" htmlSafe=true}}
         </div>
-    `
+    `,
   });
-
 });

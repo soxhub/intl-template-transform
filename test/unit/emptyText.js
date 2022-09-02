@@ -14,7 +14,7 @@ describe('Empty text', function () {
         <strong></strong>
         {{format-message "This is"}}
         <strong></strong>
-    `
+    `,
   });
 
   testCase({
@@ -26,7 +26,7 @@ describe('Empty text', function () {
     `,
     output: `
         {{format-message "This is <strong></strong> text." htmlSafe=true}}
-    `
+    `,
   });
 
   testCase({
@@ -38,7 +38,7 @@ describe('Empty text', function () {
     output: `
         {{format-message "Some Text"}}
         <strong>&middot;</strong>
-    `
+    `,
   });
 
   testCase({
@@ -54,6 +54,6 @@ describe('Empty text', function () {
     {{comment.ownerUser.fullName}} &nbsp;&nbsp;&middot;&nbsp;&nbsp;
 							{{format-date-ago comment.createdAt}}
               </span>
-    `
+    `,
   });
 });

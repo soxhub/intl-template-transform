@@ -21,7 +21,7 @@ describe('nested elements', function () {
     />
     <span>
       {{format-message "aaa <span title='{sponsorName} website'> test </span>" sponsorName=sponsor.name htmlSafe=true}}
-    </span>`
+    </span>`,
   });
 
   testCase({
@@ -38,7 +38,7 @@ describe('nested elements', function () {
     output: `
     <span>
       {{format-message "<span> Hello </span> <span title='{sponsorName} website'> world </span>" sponsorName=sponsor.name htmlSafe=true}}
-    </span>`
+    </span>`,
   });
 
   testCase({
@@ -103,4 +103,4 @@ describe('nested elements', function () {
       {{format-message "Status {a} <strong> {b} </strong><span title='{sponsorName} website'> {c} </span> is interesting." a=this.a b=this.b sponsorName=sponsor.name c=this.c htmlSafe=true}}
     </span>`,
   });
-})
+});

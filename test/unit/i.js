@@ -8,7 +8,7 @@ describe('test of auditboard-icons', function () {
     `,
     output: `
     <i class="auditboard-icons fs-14 mr-3">lock_fill</i> {{format-message "Changes"}}
-    `
+    `,
   });
 
   testCase({
@@ -18,13 +18,13 @@ describe('test of auditboard-icons', function () {
     `,
     output: `
     {{format-message "<i class='fs-14 mr-3'>This is</i> nice text." htmlSafe=true}}
-    `
+    `,
   });
 
   testCase({
     name: 'i translated',
     input: `<i class="fs-14 mr-3">This is nice text.</i>`,
-    output: `<i class="fs-14 mr-3">{{format-message "This is nice text."}}</i>`
+    output: `<i class="fs-14 mr-3">{{format-message "This is nice text."}}</i>`,
   });
 
   testCase({
@@ -34,6 +34,6 @@ describe('test of auditboard-icons', function () {
     `,
     output: `
         <i class='material-icons'> content_cut </i> <span> {{format-message "Cut"}} </span>
-    `
+    `,
   });
 });

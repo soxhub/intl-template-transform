@@ -10,7 +10,7 @@ describe('test modifiers', function () {
     `,
     output: `
         {{format-message "This is <strong>interesting</strong> text." htmlSafe=true}}
-    `
+    `,
   });
 
   testCase({
@@ -24,6 +24,6 @@ describe('test modifiers', function () {
         {{format-message "This is"}}
         <strong {{on 'click' this.doSomething}}>{{format-message "interesting"}}</strong>
         {{format-message "text."}}
-    `
+    `,
   });
 });

@@ -10,7 +10,7 @@ describe('Placeholders in translations', function () {
     output: `
     <span>
         {{format-message "Hello {world}" world=this.world}}
-    </span>`
+    </span>`,
   });
 
   testCase({
@@ -22,6 +22,6 @@ describe('Placeholders in translations', function () {
     output: `
     <span>
         {{format-message "Hello {world}" world=@world}}
-    </span>`
+    </span>`,
   });
 });

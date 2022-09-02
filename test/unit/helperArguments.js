@@ -8,6 +8,6 @@ describe('Helper Arguments', function () {
       </span>`,
     output: `<span title={{format-message "{fnTestFunction3} website '{4'}" fnTestFunction3=(fn this.testFunction 2.2 "{3}")}}>
         {{format-message "test"}}
-      </span>`
-  })
-})
+      </span>`,
+  });
+});

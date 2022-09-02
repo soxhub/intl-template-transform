@@ -30,19 +30,23 @@ describe('Acceptance Test | run full transform on ember application', function (
       compareContent: true,
     });
 
-    const differentFiles = res.diffSet?.filter(diff => diff.reason).map(diff => {
-      return {
-        before: readFileSync(join(diff.path1, diff.name1), 'utf8'),
-        after: readFileSync(join(diff.path2, diff.name2), 'utf8'),
-        relativePath: diff.relativePath,
-        name: diff.name1,
-      }
-    });
+    const differentFiles = res.diffSet
+      ?.filter((diff) => diff.reason)
+      .map((diff) => {
+        return {
+          before: readFileSync(join(diff.path1, diff.name1), 'utf8'),
+          after: readFileSync(join(diff.path2, diff.name2), 'utf8'),
+          relativePath: diff.relativePath,
+          name: diff.name1,
+        };
+      });
 
     differentFiles.forEach((diff) => {
-      expect(diff.before, join(diff.relativePath, diff.name)).to.equal(diff.after);
+      expect(diff.before, join(diff.relativePath, diff.name)).to.equal(
+        diff.after
+      );
     });
 
     expect(res.same, "The input doesn't match the output").to.be.ok;
-  })
+  });
 });
