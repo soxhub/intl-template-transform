@@ -12,7 +12,7 @@ describe('Positional params', function () {
     {{page-title
       (format-message "Nice Title")
       "Second Param"}}
-    `
+    `,
   });
 
   testCase({
@@ -26,7 +26,7 @@ describe('Positional params', function () {
     {{attr-label
       "First Param"
       (format-message "Second Param")}}
-    `
+    `,
   });
 
   testCase({
@@ -46,6 +46,6 @@ describe('Positional params', function () {
       "Second Param"}}>
       {{format-message "Test span"}}
     </span>
-    `
+    `,
   });
 });

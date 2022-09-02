@@ -6,6 +6,6 @@ describe('html atrributes', function () {
     input: `
     <span aria-label='Nice Label'></span>`,
     output: `
-    <span aria-label={{format-message "Nice Label"}}></span>`
+    <span aria-label={{format-message "Nice Label"}}></span>`,
   });
 });

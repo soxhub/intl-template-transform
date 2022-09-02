@@ -1,8 +1,8 @@
-const testCase = require("../helpers/test-case");
+const testCase = require('../helpers/test-case');
 
-describe("Translate pluralize", function () {
+describe('Translate pluralize', function () {
   testCase({
-    name: "pluralize should be translated with counts",
+    name: 'pluralize should be translated with counts',
     input: `
     Reopen {{pluralize this.selectedCount "Task" without-count=false}}
     `,
@@ -12,7 +12,7 @@ describe("Translate pluralize", function () {
   });
 
   testCase({
-    name: "pluralize should be translated with counts, when no parameter",
+    name: 'pluralize should be translated with counts, when no parameter',
     input: `
     Reopen {{pluralize this.selectedCount "Task"}}
     `,
@@ -22,7 +22,7 @@ describe("Translate pluralize", function () {
   });
 
   testCase({
-    name: "pluralize should be translated without counts",
+    name: 'pluralize should be translated without counts',
     input: `
     Reopen {{pluralize this.selectedCount "Task" without-count=true}}
     `,

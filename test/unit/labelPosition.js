@@ -1,6 +1,6 @@
-const testCase = require("../helpers/test-case");
+const testCase = require('../helpers/test-case');
 
-describe("Exclude labelPosition argument", function () {
+describe('Exclude labelPosition argument', function () {
   testCase({
     name: "labelPosition shouldn't be translated",
     input: `

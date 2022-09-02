@@ -5,13 +5,13 @@ if (semver.lt(process.version, '14.0.0')) {
   process.exit(1);
 }
 
-const yargs = require('yargs/yargs')
-const { hideBin } = require('yargs/helpers')
+const yargs = require('yargs/yargs');
+const { hideBin } = require('yargs/helpers');
 const { transform } = require('ember-template-recast');
 const fs = require('fs/promises');
 const { join } = require('path');
 const glob = require('glob');
-const { run: jscodeshift } = require('jscodeshift/src/Runner')
+const { run: jscodeshift } = require('jscodeshift/src/Runner');
 
 const visitor = require('../lib/transform');
 
@@ -29,7 +29,7 @@ async function processHbs(paths) {
       let { code } = transform({
         template,
         filePath: path,
-        plugin: visitor
+        plugin: visitor,
       });
       await fs.writeFile(path, code);
     }
@@ -40,15 +40,19 @@ async function processHbs(paths) {
 
 async function processJs(paths) {
   const options = {};
-  const res = await jscodeshift(join(__dirname, '../', 'lib', 'jsshift.js'), paths, options);
-  console.log(res)
+  const res = await jscodeshift(
+    join(__dirname, '../', 'lib', 'jsshift.js'),
+    paths,
+    options
+  );
+  console.log(res);
 }
 
 async function processFiles(globString) {
-  const paths = glob.sync(globString)
+  const paths = glob.sync(globString);
 
-  const jsPaths = paths.filter(file => file.endsWith('.js'));
-  const hbsPaths = paths.filter(file => file.endsWith('.hbs'));
+  const jsPaths = paths.filter((file) => file.endsWith('.js'));
+  const hbsPaths = paths.filter((file) => file.endsWith('.hbs'));
 
   await processHbs(hbsPaths);
   await processJs(jsPaths);

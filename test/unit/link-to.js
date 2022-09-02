@@ -12,7 +12,7 @@ describe('Exclude curly components', function () {
         <span>
             {{format-message "Click"}} {{link-to "Contact Support" "zendesk.index"}}
         </span>
-    `
+    `,
   });
 
   testCase({
@@ -30,7 +30,7 @@ describe('Exclude curly components', function () {
                 {{format-message "Click here"}}
             {{/link-to}}
         </span>
-    `
+    `,
   });
 
   testCase({
@@ -44,6 +44,6 @@ describe('Exclude curly components', function () {
         <span>
             {{format-message "Text"}} {{input value=this.val}}
         </span>
-    `
+    `,
   });
 });

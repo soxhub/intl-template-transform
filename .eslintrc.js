@@ -16,7 +16,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: [
-    'test/codeshift-fixtures/*'
-  ]
+  ignorePatterns: ['test/codeshift-fixtures/*'],
 };

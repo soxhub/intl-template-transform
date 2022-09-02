@@ -12,7 +12,7 @@ describe('nested elements', function () {
     output: `
     <span>
       {{format-message "Hello <br /> world" htmlSafe=true}}
-    </span>`
+    </span>`,
   });
 
   testCase({
@@ -28,7 +28,7 @@ describe('nested elements', function () {
     <span>
       {{format-message "Hello <br /> world" htmlSafe=true}}
       <br />
-    </span>`
+    </span>`,
   });
 
   testCase({
@@ -44,7 +44,7 @@ describe('nested elements', function () {
     <span>
       <br />
       {{format-message "Hello <br /> world" htmlSafe=true}}
-    </span>`
+    </span>`,
   });
 
   testCase({
@@ -64,6 +64,6 @@ describe('nested elements', function () {
       <br />
       {{format-message "Hello <br /> world" htmlSafe=true}}
       <br />
-    </span>`
+    </span>`,
   });
-})
+});

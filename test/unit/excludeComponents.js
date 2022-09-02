@@ -34,6 +34,6 @@ describe('Helper Arguments', function () {
         idValue=audit.toValue
       }}
     </span>
-    `
+    `,
   });
-})
+});
