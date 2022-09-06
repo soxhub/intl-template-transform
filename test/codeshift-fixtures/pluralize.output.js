@@ -10,7 +10,7 @@ export default Component.extend({
     });
 
     const b = this.intl.formatMessage({
-        defaultMessage: '{count, plural, =0 {no Tasks} =1 {one Task} other {# Tasks}}',
+        defaultMessage: '{count, plural, =0 {no Tasks} =1 {# Task} other {# Tasks}}',
     }, {
         count: this.count,
     });

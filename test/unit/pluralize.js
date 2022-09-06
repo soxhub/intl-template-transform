@@ -7,7 +7,7 @@ describe('Translate pluralize', function () {
     Reopen {{pluralize this.selectedCount "Task" without-count=false}}
     `,
     output: `
-    {{format-message "Reopen {count, plural, =0 {no Tasks} =1 {one Task} other {# Tasks}}" count=this.selectedCount}}
+    {{format-message "Reopen {count, plural, =0 {no Tasks} =1 {# Task} other {# Tasks}}" count=this.selectedCount}}
     `,
   });
 
@@ -17,7 +17,7 @@ describe('Translate pluralize', function () {
     Reopen {{pluralize this.selectedCount "Task"}}
     `,
     output: `
-    {{format-message "Reopen {count, plural, =0 {no Tasks} =1 {one Task} other {# Tasks}}" count=this.selectedCount}}
+    {{format-message "Reopen {count, plural, =0 {no Tasks} =1 {# Task} other {# Tasks}}" count=this.selectedCount}}
     `,
   });
 
