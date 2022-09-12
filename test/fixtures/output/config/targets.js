@@ -1,5 +1,6 @@
 'use strict';
 
+//TODO: intl-template-transform text must be inside ember class or inside a function with parameter intl, container, owner or intl can be defined inside the function.
 const browsers = [
   'last 1 Chrome versions',
   'last 1 Firefox versions',
