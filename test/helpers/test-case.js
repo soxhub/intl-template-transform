@@ -1,10 +1,10 @@
 const { expect } = require('chai');
 const { transform } = require('ember-template-recast');
-const visitor = require('../../lib/transform');
+const visitorFactory = require('../../lib/transform');
 
 function testCase(options) {
   it(options.name, function () {
-    let { code } = transform(options.input, visitor);
+    let { code } = transform(options.input, visitorFactory());
     expect(code).to.eql(options.output);
   });
 }
