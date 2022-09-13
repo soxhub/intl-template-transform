@@ -24,7 +24,11 @@ describe('Acceptance Test | run full transform on ember application', function (
       dot: true,
     });
 
-    await execa(binPath, { cwd: tempDir, stderr: 'inherit' });
+    await execa(binPath, [`${tempDir}/**/*.{js,hbs}`], {
+      cwd: tempDir,
+      stderr: 'inherit',
+      stdout: 'inherit',
+    });
 
     const res = await dircompare.compare(tempDir, outputDir, {
       compareContent: true,
